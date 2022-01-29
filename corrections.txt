@@ -1,0 +1,4 @@
+1. Status in all books after sending request 
+2. Accept and decline needs to work 
+3.remove from registere city,state,pincode
+4. searxh function should work by bookname
