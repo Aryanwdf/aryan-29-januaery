@@ -1,0 +1,24 @@
+{%extends 'layout.html'%}
+{%block content%}
+<div class="container">
+    <form action="/add_books" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Bookname</label>
+          <input type="text" class="form-control" name="bookname" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+
+        <div class="form-floating">
+            <label for="floatingTextarea2">About the Book</label>
+            <textarea class="form-control" name="book_detail" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        </div>
+
+        <div class="form-floating">
+            <label for="floatingTextarea2">Upload the coverpage</label>
+            <input class="form-control" type="file" name="coverpage" id="floatingTextarea2">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add a Book</button>
+        
+      </form>
+</div>  
+{%endblock content%}

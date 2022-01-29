@@ -1,0 +1,26 @@
+Learn Html Tables
+Learn Html Forms
+    -Different types of input
+    -Different types of buttons
+    -Attributes used in Form
+    -GET & POST Method
+
+Flask Functions
+    -render_template
+    -Session
+    -redirect
+    -url_for
+    -request
+    -flash messages*
+
+Python
+    -Conditions
+    -Functions
+    -Lists & Dictionaries
+    -For loops
+
+Sql
+    -insert and retrieving data from table using sql commands
+    -Creating Tables, Inserting values,select queries
+    -sql constraints
+    

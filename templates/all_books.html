@@ -1,0 +1,58 @@
+{%extends 'layout.html'%}
+{%block content%}
+<style>
+  img{
+    width: 150px;
+    height: 150px;
+  }
+</style>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope='col'>Book Image</th>
+            <th scope="col">Bookname</th>
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {%for record in records%}  
+          <tr>
+            <td><img src={{record[3]}} alt=""></td>
+            <td>{{record[1]}}</div></td>
+            <td><div style="width: 300px; ">{{record[2]}}</td>
+            {%if record[4] == 1%}
+            <td >
+              <p ><a href="/request_for_rent/{{record[0]}}"><button style="background-color: lightgreen;"> Send request</button></a></p>
+              <!-- {%if session.get('authenticated') != True %} -->
+              <!-- {%else%} -->
+              <!-- <button disabled="disabled">Uploaded By You</button> -->
+              <!-- {%endif%} -->
+            </td>
+            {%elif record[4] == 2%}
+            <td>
+              <p><a href="/not_available/{{record[0]}}"><button style="background-color: red;">Requested for rent</button></a></p>
+            </td>
+            {%else%}
+            <td>Already Rented</td>
+            {%endif%}
+          </tr>
+          {%endfor%}
+        </tbody>
+
+    </table>
+  
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+</div>
+
+{%endblock%}

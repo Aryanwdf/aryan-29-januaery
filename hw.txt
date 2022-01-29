@@ -1,0 +1,1 @@
+remove unnecessary nav in login page

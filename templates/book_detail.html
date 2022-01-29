@@ -1,0 +1,16 @@
+{%extends 'layout.html'%}
+{%block content%}
+<div class="container">
+    {%for record in records%}
+    <div class="card" style="width: 18rem;">
+        <img src="../static/images/coverpage.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{record[0]}}</h5>
+          <p class="card-text">{{record[1]}}</p>
+          <p class="card-text">{{record[2]}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    {%endfor%}
+</div>
+{%endblock%}

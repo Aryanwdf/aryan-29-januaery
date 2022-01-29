@@ -1,0 +1,35 @@
+{%extends 'layout.html'%}
+{%block content%}
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Book ID</th>
+            
+            <th scope="col">Bookname</th>
+            <th scope="col">Description</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          {%for record in records%}  
+          <tr>
+            <th scope="row">{{record[0]}}</th>
+            <td>{{record[1]}}</td>
+            <td>{{record[2]}}</td>
+          
+          {%endfor%}
+        </tbody>
+    </table>
+    <!-- <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav> -->
+</div>
+
+{%endblock%}

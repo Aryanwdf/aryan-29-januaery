@@ -1,0 +1,37 @@
+{%extends 'layout.html'%}
+{%block content%}
+<style>
+  img{
+    width: 150px;
+    height: 150px;
+  }
+</style>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope='col'>Book Image</th>
+            <th scope="col">Bookname</th>
+            <th scope="col">Description</th>
+            <th scope="col">Your Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {%for record in records%}  
+          <tr>
+            <td><img src={{record[3]}} alt=""></td>
+            <td>{{record[1]}}</div></td>
+            <td><div style="width: 300px; ">{{record[2]}}</td>
+            <td> 
+              <a href="/approve_request/{{record[0]}}"><button>Accept</button></a>
+              <a href="/decline_request/{{record[0]}}"><button>Decline</button></a>
+            </td>
+
+          {%endfor%}
+        </tbody>
+
+    </table>
+</div>
+
+{%endblock%}

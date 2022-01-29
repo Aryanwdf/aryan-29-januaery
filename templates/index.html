@@ -1,0 +1,24 @@
+{%extends 'layout.html'%}
+{%block content%}
+<div class="container">
+    <h1>Home Page</h1>
+    <p>A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover. ... The intellectual content in a physical book need not be a composition, nor even be called a book.</p>
+    {%for record in records%}
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            {{record[0]}}
+          </div>
+          <div class="col">
+            {{record[1]}}
+          </div>
+          <div class="col">
+            {{record[2]}}
+          </div>
+        </div>
+      </div>
+    {%endfor%}
+</div>
+
+
+{%endblock%}
