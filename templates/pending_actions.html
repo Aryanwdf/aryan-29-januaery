@@ -6,6 +6,7 @@
     height: 150px;
   }
 </style>
+{%if records%}
 <div class="container">
     <table class="table">
         <thead>
@@ -21,17 +22,24 @@
           {%for record in records%}  
           <tr>
             <td><img src={{record[3]}} alt=""></td>
-            <td>{{record[1]}}</div></td>
+            <td>{{record[1]}}</td>
             <td><div style="width: 300px; ">{{record[2]}}</td>
-            <td> 
-              <a href="/approve_request/{{record[0]}}"><button>Accept</button></a>
-              <a href="/decline_request/{{record[0]}}"><button>Decline</button></a>
+            <td>
+              {%if record[4]==2%}
+                <button disabled="disabled" style="background-color: red; color: black;">No action pending</button>
+              {%elif record[4]==3%}
+                <a href="/approve_request/{{record[0]}}"><button>Accept</button></a>
+                <a href="/decline_request/{{record[0]}}"><button>Decline</button></a>
+              {%endif%}
             </td>
-
           {%endfor%}
         </tbody>
 
     </table>
 </div>
+{%else%}
+  <h3 style="text-align: center;">No Records Found</h3>
+{%endif%}
+
 
 {%endblock%}

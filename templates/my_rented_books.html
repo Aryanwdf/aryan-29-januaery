@@ -6,6 +6,7 @@
     height: 150px;
   }
 </style>
+{%if records%}
 <div class="container">
     <table class="table">
         <thead>
@@ -13,29 +14,37 @@
             <th scope='col'>Book Image</th>
             <th scope="col">Bookname</th>
             <th scope="col">Description</th>
+            <th scope="col">Description</th>
           </tr>
         </thead>
 
         <tbody>
           {%for record in records%}  
           <tr>
-            <td><img src={{record[3]}} alt=""></td>
+            <td>
+              {%if record[3].count('.')==0%}
+                <img src="../static/media/default-book.jpg" alt="">
+              {%else%}
+                <img src={{record[3]}} alt="">
+              {%endif%}
+            </td>
+            
             <td>{{record[1]}}</div></td>
             <td><div style="width: 300px; ">{{record[2]}}</td>
+              <td>
+                {%if record[4]==3%}
+                    <button disabled="disabled" style="background-color: yellow; color:black;">Waiting For Approval</button>
+                  {%elif record[4]==2%}
+                    <a href="/return_book/{{record[0]}}"><button>Return Book</button></a>
+                  {%endif%}
+                </td>
           {%endfor%}
         </tbody>
 
     </table>
-  
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
 </div>
+{%else%}
+  <h3 style="text-align: center;">No Records Found</h3>
+{%endif%}
 
 {%endblock%}

@@ -1,11 +1,11 @@
 {%extends 'layout.html'%}
 {%block content%}
+{%if records%}
 <div class="container">
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">Book ID</th>
-            
+            <th scope="col">BookID</th>
             <th scope="col">Bookname</th>
             <th scope="col">Description</th>
            
@@ -31,5 +31,8 @@
         </ul>
       </nav> -->
 </div>
+{%else%}
+  <h3 style="text-align: center;">No Records Found</h3>
+{%endif%}
 
 {%endblock%}

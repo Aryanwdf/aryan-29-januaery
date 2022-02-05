@@ -6,71 +6,42 @@
   {{error_message}}
     <form action="/register" method="POST" class="needs-validation" >
         <div class="form-row">
+
           <div class="col-md-4 mb-3">
-            <label for="validationCustom01">First name</label>
-            <input type="text" class="form-control" name="fname" id="validationCustom01" placeholder="First name" value="Mark" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
+            <label for="validationCustom01">First name*</label>
+            <input type="text" class="form-control" name="fname" id="validationCustom01" placeholder="First name"  required>
           </div>
+
           <div class="col-md-4 mb-3">
-            <label for="validationCustom02">Last name</label>
-            <input type="text" class="form-control" name="lname" id="validationCustom02" placeholder="Last name" value="Otto" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
+            <label for="validationCustom02">Last name*</label>
+            <input type="text" class="form-control" name="lname" id="validationCustom02" placeholder="Last name"  required>
           </div>
+
           <div class="col-md-4 mb-3">
-            <label for="validationCustom02">Email</label>
-            <input type="email" class="form-control" name="email" id="validationCustom02" placeholder="Last name" value="Otto" required>
-            <div class="valid-feedback">
-              Looks good!
-            </div>
-          </div>
-          
+            <label for="validationCustom02">Email*</label>
+            <input type="email" class="form-control" name="email" id="validationCustom02" placeholder="Email" required>
+           </div>
+
         </div>
         <div class="form-row">
           <div class="col-md-6 mb-3">
-            <label for="validationCustom03">City</label>
-            <input type="text" class="form-control" name="city" id="validationCustom03" placeholder="City" required>
-            <div class="invalid-feedback">
-              Please provide a valid city.
-            </div>
+            <label for="validationCustom03">City(optional)</label>
+            <input type="text" class="form-control" name="city" id="validationCustom03" placeholder="City">
           </div>
+          
           <div class="col-md-3 mb-3">
-            <label for="validationCustom04">State</label>
-            <input type="text" class="form-control" name="state" id="validationCustom04" placeholder="State" required>
-            <div class="invalid-feedback">
-              Please provide a valid state.
-            </div>
+            <label for="validationCustom04">Password*</label>
+            <input type="password" class="form-control" name="password" id="validationCustom04" placeholder="Password" required>
           </div>
+
           <div class="col-md-3 mb-3">
-            <label for="validationCustom04">Password</label>
-            <input type="password" class="form-control" name="password" id="validationCustom04" placeholder="State" required>
-            <div class="invalid-feedback">
-              Please provide a valid password.
-            </div>
+            <label for="validationCustom04">Confirm Password*</label>
+            <input type="password" class="form-control" name="confirm_password" id="validationCustom04" placeholder="Confirm Password" required>
           </div>
+
           <div class="col-md-3 mb-3">
-            <label for="validationCustom04">Confirm Password</label>
-            <input type="password" class="form-control" name="confirm_password" id="validationCustom04" placeholder="State" required>
-            <div class="invalid-feedback">
-              Please provide a valid password.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationCustom05">Pincode</label>
-            <input type="text" class="form-control" name="pincode" id="validationCustom05" placeholder="Zip" required>
-            <div class="invalid-feedback">
-              Please provide a valid Pincode.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationCustom05">Contact</label>
-            <input type="text" class="form-control" name="contact" id="validationCustom05" placeholder="Zip" required>
-            <div class="invalid-feedback">
-              Please provide a valid Phone number.
-            </div>
+            <label for="validationCustom05">Contact(optional)</label>
+            <input type="text" class="form-control" name="contact" id="validationCustom05" placeholder="Contact" required>
           </div>
         </div>
         <button class="btn btn-primary" type="submit">Register</button>
